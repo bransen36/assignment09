@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Project Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="TODO: A starter project for ..." />
 
-    <link rel="stylesheet" href="./stylesheets/main.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Guest Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="TODO: A starter project for ..." />
 
-  <body>
-    <!-- Your HTML goes here -->
-    <h1 class="display-2 text-center my-5 py-5">
-      <span class="d-block py-5">
-        <i class="bi bi-filetype-html text-primary"></i>
-        <i class="bi bi-filetype-css text-danger"></i>
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
+  <link rel="stylesheet" href="./stylesheets/main.css" />
+</head>
 
-      Welcome to CS 2350!
+<body>
+  <div class="hero container-fluid py-5">
+    <h1 class="display-3 fw-bold text-center">Guest <i class="bi bi-book-half"></i> Book
     </h1>
+  </div>
 
-    <script type="module" src="./javascripts/main.js"></script>
-  </body>
+  <div class="container mb-5">
+    <form method="post" id="guestForm">
+      <div class="mb-3">
+        <label for="fName" class="form-label"><Strong>Guest's First Name</Strong></label>
+        <input type="text" class="form-control" id="fName">
+      </div>
+      <div class="mb-3">
+        <label for="lName" class="form-label"><Strong>Guest's Last Name</Strong></label>
+        <input type="text" class="form-control" id="lName">
+      </div>
+      <button type="submit" class="btn btn-primary" id="add_guest">Add a Guest</button>
+      <button type="reset" class="btn btn-secondary" id="reset_form">Reset</button>
+    </form>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-6"><h3>Registered Guests</h3></div>
+      <div class="col-6 d-flex justify-content-end"><button class="btn btn-danger" id="clear_list">Clear All</button></div>
+    </div>
+    <div class="row">
+      <div class="col-6 border-bottom my-2"><strong>First Name</strong></div>
+      <div class="col-6 border-bottom my-2"><strong>Last Name</strong></div>
+    </div>
+
+    <div id="guest_names"></div>
+  </div>
+  <script type="module" src="./javascripts/main.js"></script>
+</body>
+
 </html>
